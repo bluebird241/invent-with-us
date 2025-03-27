@@ -4,54 +4,96 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Invent with Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0c0c1d;
-      color: #f1f5f9;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(-45deg, #1e1e3f, #0f0f2e, #000000, #0f172a);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
+      color: #e2e8f0;
+      overflow-x: hidden;
     }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
     header {
       text-align: center;
-      padding: 4rem 2rem;
-      background: linear-gradient(135deg, #3b82f6, #9333ea);
+      padding: 6rem 1rem 3rem;
+      position: relative;
+      overflow: hidden;
     }
-    header h1 {
+
+    .typing-title {
       font-size: 3rem;
-      margin-bottom: 0.5rem;
+      color: #7dd3fc;
+      border-right: 2px solid #7dd3fc;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3.5s steps(30, end) forwards, blink 0.75s step-end infinite;
     }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
     header p {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       max-width: 700px;
-      margin: 0 auto;
+      margin: 1.5rem auto 0;
+      color: #cbd5e1;
     }
+
     section {
       padding: 3rem 1.5rem;
       max-width: 800px;
       margin: auto;
     }
+
     h2 {
       color: #60a5fa;
       margin-bottom: 1rem;
     }
+
     .project {
-      background: #1e293b;
+      background: rgba(30, 41, 59, 0.8);
       padding: 1.5rem;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-bottom: 2rem;
+      border: 1px solid #3b82f6;
     }
+
     .form-group {
       margin-bottom: 1rem;
     }
+
     input, textarea {
       width: 100%;
       padding: 0.75rem;
-      border-radius: 5px;
+      border-radius: 6px;
       border: none;
       font-size: 1rem;
-      background: #334155;
+      background: #1e293b;
       color: white;
+      transition: 0.3s ease;
     }
+
+    input:focus, textarea:focus {
+      outline: none;
+      background-color: #334155;
+    }
+
     input[type="submit"] {
       background-color: #3b82f6;
       color: white;
@@ -59,22 +101,43 @@
       cursor: pointer;
       transition: 0.3s ease;
     }
+
     input[type="submit"]:hover {
       background-color: #2563eb;
     }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background: #1e293b;
+      background: rgba(30, 41, 59, 0.6);
       font-size: 0.9rem;
       color: #94a3b8;
+      margin-top: 3rem;
+    }
+
+    /* Floating hexagons */
+    .hexagon-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background-image: url('https://www.transparenttextures.com/patterns/hexellence.png');
+      opacity: 0.05;
+      animation: moveBg 60s linear infinite;
+    }
+
+    @keyframes moveBg {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Invent with Us</h1>
+    <div class="hexagon-bg"></div>
+    <div class="typing-title">Invent with Us</div>
     <p>A safe space to dream, build, and launch science projects together. Founded by a curious mind who goes by the name <strong>Bluebird</strong>.</p>
   </header>
 
