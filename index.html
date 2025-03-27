@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invent with Us</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0c0c1d;
+      color: #f1f5f9;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #3b82f6, #9333ea);
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: #60a5fa;
+      margin-bottom: 1rem;
+    }
+    .project {
+      background: #1e293b;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+      background: #334155;
+      color: white;
+    }
+    input[type="submit"] {
+      background-color: #3b82f6;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #2563eb;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #1e293b;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Invent with Us</h1>
+    <p>A safe space to dream, build, and launch science projects together. Founded by a curious mind who goes by the name <strong>Bluebird</strong>.</p>
+  </header>
+
+  <section>
+    <h2>About Bluebird</h2>
+    <p>I’m Bluebird—just another dreamer who believes that science belongs to everyone. This space is for thinkers, makers, tinkerers, and rebels who want to invent something the world hasn’t seen yet. Physics, robotics, clean energy, neurotech—nothing is off the table.</p>
+  </section>
+
+  <section>
+    <h2>Idea Lab: Let’s Build Something New</h2>
+    <div class="project">
+      <h3>Smart Chair Project (Example)</h3>
+      <p>Imagine a chair that adjusts posture automatically, detects drowsiness, or charges your devices wirelessly. That’s just one idea. Got one of your own?</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Submit Your Idea</h2>
+    <p>Have a crazy, cool, or clever science idea? Submit it below. I’ll read every one.</p>
+    <form action="https://formsubmit.co/YOUREMAIL@example.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your name or nickname" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your email (optional)">
+      </div>
+      <div class="form-group">
+        <textarea name="idea" rows="6" placeholder="Describe your idea..." required></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Submit Idea">
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    Made with curiosity by Bluebird. Let’s make science exciting again.
+  </footer>
+
+</body>
+</html>
